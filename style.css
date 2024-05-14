@@ -1,0 +1,245 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  transition: all 400ms ease;
+}
+
+body {
+  background: url("bg2.jpg");
+  font-family: Arial, Helvetica, sans-serif;
+  display: grid;
+  background-size: cover;
+  background-repeat: no-repeat;
+  place-content: center;
+  width: 100vw;
+  height: 100vh;
+  gap: 10px;
+  overflow: auto;
+}
+
+div.upper {
+  display: grid;
+  place-content: center;
+  text-align: center;
+  width: 300px;
+  place-self: center;
+  /* border: 5px solid rgba(255, 255, 255, 0.523); */
+  /* background: rgba(0, 0, 200, 0.5); */
+  background: linear-gradient(
+    30deg,
+    rgba(0, 0, 200, 0.4),
+    90%,
+    rgb(205, 205, 205, 0.4)
+  );
+  color: white;
+  backdrop-filter: blur(10px);
+  user-select: none;
+  border-radius: 10px;
+  height: max-content;
+  padding: 20px;
+  margin-bottom: 10px;
+}
+
+h1 {
+  font-size: 40px;
+  letter-spacing: 1px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+}
+
+.upper h3 {
+  font-family: monospace;
+  color: rgba(240, 240, 240);
+}
+
+section.login,
+section.reg {
+  display: grid;
+  place-content: center;
+  place-self: center;
+  margin: 10px;
+  text-align: center;
+  width: 90%;
+  height: max-content;
+  padding: 30px;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 20px;
+  backdrop-filter: blur(8px);
+}
+
+.login h2,
+.reg h2 {
+  font-size: 20px;
+  user-select: none;
+  letter-spacing: 1px;
+  color: white;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.login div,
+.reg div {
+  display: grid;
+  gap: 5px;
+  width: 100%;
+  place-self: center;
+  place-items: center;
+  min-width: 300px;
+}
+
+.login input,
+.reg input {
+  border: 2px solid transparent;
+  outline: none;
+  padding: 10px;
+  width: 98%;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
+  font-size: 16px;
+}
+
+.login input:focus,
+.reg input:focus {
+  border: 2px solid rgba(0, 0, 200);
+  width: 100%;
+}
+
+input.log-password,
+input.reg-password-confirm {
+  width: 80%;
+}
+
+div.pass-div {
+  display: flex;
+  place-content: center;
+  gap: 10px;
+}
+
+span.log-eye,
+.eye {
+  display: grid;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 10px;
+  user-select: none;
+  border-radius: 50%;
+  place-content: center;
+  color: rgba(0, 0, 200, 0.8);
+}
+
+span.log-eye:hover {
+  background-color: white;
+}
+
+.login button#login,
+.reg button#reg {
+  width: 60%;
+  place-self: center;
+  background: rgba(0, 0, 200, 0.5);
+  border: none;
+  user-select: none;
+  padding: 8px;
+  margin: 10px;
+  border-radius: 20px;
+  color: white;
+  font-weight: 30px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.login button#login:hover,
+.reg button#reg:hover {
+  background-color: rgba(0, 0, 200, 0.8);
+  width: 65%;
+}
+
+.login div.lower,
+.reg div.lower {
+  display: flex;
+  width: 100%;
+  place-content: center;
+  gap: 20px;
+  text-align: center;
+  font-size: smaller;
+  padding-top: 10px;
+  cursor: pointer;
+  user-select: none;
+  letter-spacing: 1px;
+}
+
+.lower p:hover {
+  text-decoration: underline;
+  color: rgb(234, 234, 234);
+}
+
+/* styles for the animations and slides */
+section.none {
+  display: none;
+}
+
+/* fade IN effect on elements */
+.fadeIn {
+  animation-name: fd;
+  animation-timing-function: ease-in-out;
+  animation-duration: 2s;
+  animation-delay: 10ms;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fd {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+  100% {
+    display: grid;
+    opacity: 1;
+  }
+}
+
+/* fade out effect on elements  */
+.fadeOut {
+  animation-name: fdOt;
+  animation-timing-function: ease-in-out;
+  animation-duration: 2s;
+  animation-delay: 10ms;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fdOt {
+  0% {
+    display: grid;
+    opacity: 1;
+  }
+  100% {
+    display: none;
+    opacity: 0;
+  }
+}
+
+footer.tag {
+  color: white;
+  width: 100%;
+  display: grid;
+  position: absolute;
+  font-size: small;
+  bottom: 20px;
+  text-align: center;
+  letter-spacing: 1px;
+  gap: 5px;
+  user-select: none;
+}
+
+footer p {
+  background-color: rgba(0, 0, 200, 0.5);
+  backdrop-filter: blur(10px);
+  width: 100px;
+  padding: 5px;
+  font-size: 12px;
+  border-radius: 10px;
+  place-self: center;
+}
